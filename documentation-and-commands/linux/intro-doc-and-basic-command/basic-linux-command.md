@@ -11,3 +11,11 @@
 | `mv`    | Move/Rename files      | `mv old.txt new.txt`     |
 | `cat`   | Display file content   | `cat file.txt`           |
 | `echo`  | Print a message        | `echo "Hello Linux"`     |
+
+1. pwd
+
+```
+pwd
+```
+
+![alt text](image.png) 2.
