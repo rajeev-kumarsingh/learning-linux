@@ -1,0 +1,7 @@
+1001,John Smith,Manager,IT
+1002,Alice Johnson,Developer,Engineering
+1003,Bob Williams,Designer,Marketing
+1004,Jane Doe,Developer,Engineering
+1005,Sam Brown,Manager,HR
+1006,John Davis,Developer,IT
+1007,Rajeev Singh,DevOps Engineer,IT

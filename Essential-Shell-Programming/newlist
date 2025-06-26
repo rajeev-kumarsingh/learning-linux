@@ -1,0 +1,2 @@
+107 | done > newlist done
+108 | The shell avoids such multiple file openings and closures by providing a redirection facility at the done keyword itself. done >> newlist done
