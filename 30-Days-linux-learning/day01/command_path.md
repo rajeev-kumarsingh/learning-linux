@@ -120,6 +120,126 @@ root@ip-172-31-87-81:/home/ubuntu# command -V cat
 cat is /usr/bin/cat
 ```
 
-- continue from the below link
-  https://www.baeldung.com/linux/get-path-of-linux-command
+---
+
+```bash
+command ls
+```
+
+`O/P`
+
+```bash
+ubuntu@ip-172-31-87-81:~$ command ls
+bin.txt  bin_directory	day1_july_1_2025  day2_july_2_2025
+```
+
+---
+
+## `type` COMMAND
+
+- The `type` command can not only show the path of a linux command, but it can also tell if the target is `built-in`, a `function` or an `external executable`.
+
+```bash
+ubuntu@ip-172-31-87-81:~$ type ls
+ls is aliased to `ls --color=auto'
+ubuntu@ip-172-31-87-81:~$ type cat
+cat is /usr/bin/cat
+ubuntu@ip-172-31-87-81:~$ type mv
+mv is /usr/bin/mv
+```
+
+Without the parameter it will show the command defenition
+
+---
+
+- If we use the `-a` parameter, it shows the command definition, executable type, and its path:
+
+```bash
+ubuntu@ip-172-31-87-81:~$ type -a ls
+ls is aliased to `ls --color=auto'
+ls is /usr/bin/ls
+ls is /bin/ls
+```
+
+- We can also use type `-t` to display the executable type:
+
+```bash
+ubuntu@ip-172-31-87-81:~$ type -t which
+file
+ubuntu@ip-172-31-87-81:~$ type -t command
+builtin
+ubuntu@ip-172-31-87-81:~$ type -t type
+builtin
+ubuntu@ip-172-31-87-81:~$ type -t whereis
+file
+ubuntu@ip-172-31-87-81:~$ type -t ls
+alias
+ubuntu@ip-172-31-87-81:~$
+
+```
+
+---
+
+## `whereis` COMMAND
+
+- Finally, let’s take a look at the whereis command. This command locates the path of the binary, source, and manual page of a given command.
+- If we call the utility directly, it shows all the locations of the binary, source, and manual page:
+
+```bash
+ubuntu@ip-172-31-87-81:~$ whereis docker
+docker: /snap/bin/docker
+```
+
+- In addition, we can use -b parameter to show just the binary use `-b`:
+
+```bash
+ubuntu@ip-172-31-87-81:~$ whereis -b docker
+docker: /snap/bin/docker
+
+ubuntu@ip-172-31-87-81:~$ whereis ls
+ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz
+ubuntu@ip-172-31-87-81:~$ whereis -b ls
+ls: /usr/bin/ls
+```
+
+- Moreover, if we want to show just the source (which does not exist on this system) use `-s`:
+
+```bash
+ubuntu@ip-172-31-87-81:~$ whereis -s docker
+docker:
+ubuntu@ip-172-31-87-81:~$ whereis -s ls
+ls:
+```
+
+- If we want to show just the manual us `-m` :
+
+```bash
+ubuntu@ip-172-31-87-81:~$ whereis -m docker
+docker:
+ubuntu@ip-172-31-87-81:~$ whereis -m ls
+ls: /usr/share/man/man1/ls.1.gz
+ubuntu@ip-172-31-87-81:~$ whereis -m cat
+cat: /usr/share/man/man1/cat.1.gz
+ubuntu@ip-172-31-87-81:~$
+```
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
 -
