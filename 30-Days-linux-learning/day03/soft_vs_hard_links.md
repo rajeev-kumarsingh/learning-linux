@@ -61,6 +61,8 @@ Now check:
 ls -li original.txt softlink.txt
 ```
 
+![Softlink](./img/softlink.txt)
+
 Different inode numbers, and `softlink.txt` shows an arrow pointing to `original.txt`.
 
 If you delete the original:
@@ -70,9 +72,14 @@ rm original.txt
 cat softlink.txt
 ```
 
+![Removed original.txt file](./img/removed-original-dot-txt-file.txt)
 This will result in an error: `No such file or directory`.
 
 ---
+
+## Softlink between two directories
+
+## ![Softlink between two directories](./img/softlink-between-two-directories.png)
 
 ## 🧾 Summary Table
 

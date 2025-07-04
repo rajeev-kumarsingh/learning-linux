@@ -1,6 +1,6 @@
 # Day03 Task
 
-1. Command Help
+1. cd 30
 2. Redirects
 3. Super User
 4. 2025-07-07 - Working with Files
